@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 TAVARDT Brasil
-Matriz Interativa de Ameacas a Sistemas de Inteligencia Artificial
-Matriz interativa de ameacas e guia de mitigacao para aplicacoes com Modelos de Linguagem e IA generativa. Baseado em OWASP LLM e MITRE ATLAS.
+Matriz Interativa de Ameaças a Sistemas de Inteligência Artificial
+Matriz interativa de ameaças e guia de mitigação para aplicações com Modelos de Linguagem e IA generativa. Baseado em OWASP LLM e MITRE ATLAS.
 
 Standard: OWASP Top 10 for LLM Applications e MITRE ATLAS
 Repository: https://github.com/TAVARDT-Brasil/ai-threat-matrix-br
@@ -17,15 +17,15 @@ import argparse
 from datetime import datetime
 
 THREAT_DEFINITIONS = [
-    {"id": "LLM01", "code": "OWASP-LLM01", "title": "Injecao de Prompts (Direta e Indireta)", "weight": 15, "default": "exposed"},
-    {"id": "LLM02", "code": "OWASP-LLM02", "title": "Divulgacao de Informacoes Sensiveis", "weight": 12, "default": "partial"},
+    {"id": "LLM01", "code": "OWASP-LLM01", "title": "Injeção de Prompts (Direta e Indireta)", "weight": 15, "default": "exposed"},
+    {"id": "LLM02", "code": "OWASP-LLM02", "title": "Divulgação de Informações Sensíveis", "weight": 12, "default": "partial"},
     {"id": "LLM03", "code": "OWASP-LLM03", "title": "Vulnerabilidades na Cadeia de Suprimentos", "weight": 10, "default": "exposed"},
     {"id": "LLM04", "code": "OWASP-LLM04", "title": "Envenenamento de Dados e Modelos", "weight": 10, "default": "exposed"},
-    {"id": "LLM05", "code": "OWASP-LLM05", "title": "Tratamento Inadequado de Saidas", "weight": 12, "default": "exposed"},
-    {"id": "LLM06", "code": "OWASP-LLM06", "title": "Excessiva Concessao de Autonomia", "weight": 14, "default": "exposed"},
+    {"id": "LLM05", "code": "OWASP-LLM05", "title": "Tratamento Inadequado de Saídas", "weight": 12, "default": "exposed"},
+    {"id": "LLM06", "code": "OWASP-LLM06", "title": "Excessiva Concessão de Autonomia", "weight": 14, "default": "exposed"},
     {"id": "LLM07", "code": "OWASP-LLM07", "title": "Vazamento do Prompt de Sistema", "weight": 8,  "default": "defended"},
     {"id": "LLM08", "code": "OWASP-LLM08", "title": "Fraquezas em Embeddings e Vetores", "weight": 7,  "default": "partial"},
-    {"id": "LLM09", "code": "OWASP-LLM09", "title": "Alucinacao e Desinformacao Critica", "weight": 6,  "default": "defended"},
+    {"id": "LLM09", "code": "OWASP-LLM09", "title": "Alucinação e Desinformação Crítica", "weight": 6,  "default": "defended"},
     {"id": "LLM10", "code": "OWASP-LLM10", "title": "Consumo Ilimitado de Recursos", "weight": 6,  "default": "exposed"}
 ]
 
@@ -61,7 +61,7 @@ def evaluate_posture(arch, profile_states):
     elif score >= 60:
         posture = "EM DESENVOLVIMENTO"
     else:
-        posture = "VULNERAVEL"
+        posture = "VULNERÁVEL"
 
     return {
         "architecture": arch,
@@ -99,12 +99,12 @@ def generate_blueprint_md(evaluation):
     return "\n".join(md)
 
 def main():
-    parser = argparse.ArgumentParser(description="Avaliador de Postura de Seguranca em Inteligencia Artificial e Gerador de Blueprint.")
-    parser.add_argument("--arch", choices=["agent", "rag", "chat", "api"], default="agent", help="Perfil arquitetural da aplicacao (agent, rag, chat, api)")
+    parser = argparse.ArgumentParser(description="Avaliador de Postura de Segurança em Inteligência Artificial e Gerador de Blueprint.")
+    parser.add_argument("--arch", choices=["agent", "rag", "chat", "api"], default="agent", help="Perfil arquitetural da aplicação (agent, rag, chat, api)")
     parser.add_argument("--profile", help="Caminho para arquivo JSON de perfil de controles defensivos")
-    parser.add_argument("--export-blueprint", help="Exportar blueprint de mitigacao em arquivo Markdown")
-    parser.add_argument("--strict", action="store_true", help="Falhar com codigo 1 se houver qualquer vetor vulneravel")
-    parser.add_argument("--json", action="store_true", help="Apresentar saida em formato JSON estruturado")
+    parser.add_argument("--export-blueprint", help="Exportar blueprint de mitigação em arquivo Markdown")
+    parser.add_argument("--strict", action="store_true", help="Falhar com código 1 se houver qualquer vetor vulnerável")
+    parser.add_argument("--json", action="store_true", help="Apresentar saída em formato JSON estruturado")
 
     args = parser.parse_args()
 
@@ -128,13 +128,13 @@ def main():
         bp_content = generate_blueprint_md(eval_res)
         with open(args.export_blueprint, "w", encoding="utf-8") as bf:
             bf.write(bp_content)
-        print(f"Blueprint de mitigacao gravado com sucesso em: {args.export_blueprint}")
+        print(f"Blueprint de mitigação gravado com sucesso em: {args.export_blueprint}")
 
     if args.json:
         print(json.dumps(eval_res, indent=2, ensure_ascii=False))
     else:
         print("=" * 64)
-        print(f"MATRIZ DE AMEACAS A IA: TAVARDT Brasil")
+        print(f"MATRIZ DE AMEAÇAS A IA: TAVARDT Brasil")
         print(f"Standard: OWASP Top 10 for LLM Applications e MITRE ATLAS")
         print(f"Architecture: {eval_res['architecture'].upper()}")
         print(f"Hardening Score: {eval_res['score']} / 100")
