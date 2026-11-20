@@ -82,10 +82,10 @@ jobs:
 - **Padrão Normativo**: OWASP Top 10 for LLM Applications e MITRE ATLAS
 - **Organização Mantenedora**: [TAVARDT-Brasil](https://github.com/TAVARDT-Brasil)
 
-## Ecossistema TAVARDT e Portais Oficiais
+## Portais Oficiais
 
 - **Portal Institucional**: [https://ag.tavardt.com/br/](https://ag.tavardt.com/br/)
-- **Central de Ferramentas TAVARDT**: [https://tools.tavardt.com/br/](https://tools.tavardt.com/br/)
+- **Central de Ferramentas**: [https://tools.tavardt.com/br/](https://tools.tavardt.com/br/)
 - **Canal de Atendimento e Suporte Técnico**: [https://ag.tavardt.com/br/contato/](https://ag.tavardt.com/br/contato/)
 
 ---
