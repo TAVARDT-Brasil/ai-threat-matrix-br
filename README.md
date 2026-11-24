@@ -78,7 +78,6 @@ jobs:
 
 ## Conformidade e Padrões Técnicos
 
-- **Jurisdição**: Brasil
 - **Padrão Normativo**: OWASP Top 10 for LLM Applications e MITRE ATLAS
 - **Organização Mantenedora**: [TAVARDT-Brasil](https://github.com/TAVARDT-Brasil)
 
@@ -92,3 +91,7 @@ jobs:
 
 ### Licença
 Distribuído sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+***
+
+© 2026 TAVARDT. Todos os direitos reservados.
