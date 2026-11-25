@@ -6,7 +6,7 @@
 
 Matriz interativa de ameaças e guia de mitigação para aplicações com Modelos de Linguagem e IA generativa. Baseado em OWASP LLM e MITRE ATLAS.
 
-Desenvolvido para organizações, pesquisadores e equipes de engenharia em **Brasil**, este repositório fornece uma matriz estruturada para avaliação de postura defensiva e blindagem técnica de aplicações com Modelos de Linguagem e agentes de Inteligência Artificial autônomos.
+Desenvolvido para organizações, pesquisadores e equipes de engenharia no **Brasil**, este repositório fornece uma matriz estruturada para avaliação de postura defensiva e blindagem técnica de aplicações com Modelos de Linguagem e agentes de Inteligência Artificial autônomos.
 
 ***
 
