@@ -1,9 +1,8 @@
 # Matriz Interativa de Ameaças a Sistemas de Inteligência Artificial
 
-[![Live Demo](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-38bdf8?style=for-the-badge)](https://tavardt-brasil.github.io/ai-threat-matrix-br/)
-[![Standard](https://img.shields.io/badge/Standard-OWASP%20LLM%20%26%20MITRE-3b82f6?style=for-the-badge)](https://tavardt-brasil.github.io/ai-threat-matrix-br/)
-[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Client-Side-10b981?style=for-the-badge)](https://tavardt-brasil.github.io/ai-threat-matrix-br/)
-[![License](https://img.shields.io/badge/License-MIT-slate?style=for-the-badge)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-5b3cf5.svg)](https://tavardt-brasil.github.io/ai-threat-matrix-br/)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)](LICENSE)
 
 Matriz interativa de ameaças e guia de mitigação para aplicações com Modelos de Linguagem e IA generativa. Baseado em OWASP LLM e MITRE ATLAS.
 
@@ -79,11 +78,6 @@ jobs:
 ## Conformidade e Padrões Técnicos
 
 - **Padrão Normativo**: OWASP Top 10 for LLM Applications e MITRE ATLAS
-
-***
-
-### Licença
-Distribuído sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ***
 
